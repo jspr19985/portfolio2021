@@ -1,0 +1,351 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --dkblue: #112A40;
+    --dkorange: #BC6904;
+    --orange: #F28B0C;
+    --blue: #3685C9;
+    --white: #FFFFFF;
+    --dkgrey: #47647D;
+    --midgrey: #A1B1B0;
+    --font-size: 1.3rem;
+    --mono: 'IBM Plex Sans', sans-serif;
+    --sans: 'JetBrains Mono', monospace;
+}
+
+html {
+    box-sizing: border-box;
+    /* maybe change font */
+    font-family: 'Titillium Web', sans-serif; 
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* generic styles for the page */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--dkblue);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+h1 {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+/* nav styles */
+nav {
+    font-size: 80%;
+    font-family: var(--mono);
+  }
+  
+  nav ul {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  nav ul li {
+    list-style-type: none;
+    display: inline;  
+  }
+
+  nav a i {
+    color: var(--orange);
+  }
+  
+  nav a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+  }
+  
+  nav h1 a {
+    font-family: var(--sans);
+    color: var(--orange);
+  }
+  
+  nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  
+.cv {
+    background-color: var(--blue);
+    font-weight: 900;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: thin solid var(--white);
+}
+
+.cv:hover {
+  color: var(--white);
+  box-shadow: 0.3px 0.3px 5px white;
+}
+  
+  /* intro styles */
+nav {
+    padding: 20px;
+}
+
+nav [class*="fa-"] {
+    font-size: 150%;
+  }
+
+  footer a:hover,  nav a:hover {
+    color: var(--dkorange);
+}
+
+nav [class*="fa-"]:hover {
+  color: var(--dkorange);
+}
+  
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    margin-right: 20px;
+    background-color: var(--orange);
+    color: var(--dkblue);
+}
+
+nav h1 [class*="fa-"]:hover {
+    color: var(--dkblue);
+    background-color: var(--dkorange);
+}
+
+#intro {
+    padding: 4rem 1rem 1rem 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--mono);
+    font-size: 4rem;
+    color: var(--blue);
+    display: block;
+    font-weight: 300;
+}
+
+.gradient {
+    background: rgb(17,42,64);
+    background: linear-gradient(90deg, rgba(148,82,0,1) 35%, rgba(255,189,107,1) 100%);
+    height: 2px;
+}
+
+#main {
+    background-color: var(--midgrey);
+    color: black;
+    padding: 3rem;
+    font-family: 'Titillium Web', sans-serif; 
+}
+
+.white-background {
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.flex-container, .flex-container-bottom, .flex-container-certs {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.flex-container-bottom div:nth-child(2) {
+  padding-left: 10px;
+}
+
+.history img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-container > div, .flex-container-certs div {
+    font-size: 28px;
+}
+
+.certs .grad-icon {
+  padding-right: 1rem;
+}
+
+.history {
+    margin: auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-areas:
+    'left-bottom right-bottom';
+    grid-gap: 20px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.certs {
+    margin: auto;
+    max-width: 1000px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.certs ul li {
+  list-style-type: square;
+  margin: 0;
+  padding: 0;  
+}
+
+.certs ul {
+  text-align: left;
+}
+
+.left-bottom .right-bottom {
+  width: 50%;
+}
+
+.grid-container {
+    margin: auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-areas:
+    'header header header header'
+    'left main main right';
+    grid-gap: 20px;
+    padding: 30px;
+}
+
+.grid-container > div {
+    font-size: 20px;
+}
+
+.grid-container > div > span {
+    width: 30px;
+    display: inline-block;
+}
+
+.header { grid-area: header; }
+.left { grid-area: left; max-width: 220px; }
+.center { grid-area: main; }
+.right { grid-area: right; max-width: 220px; }
+
+.right, .left, .center, .left-bottom, .right-bottom {
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px 1px grey;
+}
+
+.right, .left, .left-bottom, .right-bottom {
+    padding: 10px;
+}
+
+.center {
+    border: 10px solid grey;
+}
+
+.header {
+    text-align: left;
+}
+
+.right ul, .left ul, left-bottom, right-bottom {
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+
+.tech-icon-pad {
+    padding-right: 5px;
+}
+
+.technology {
+    margin: 10px auto;
+}
+
+.icon-react { color: aqua; }
+.icon-node { color: #009933; }
+
+footer {
+    text-align: center;
+  }
+  
+  footer a {
+    color: var(--orange);
+  }
+  
+  .footer-title {
+    font-size: 1.5em; 
+  }
+  
+  .footer-icons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 200%;
+  }
+
+  small {
+    padding: 1rem;
+  } 
+
+@media only screen and (max-width: 800px) {
+
+    .grid-container {
+        margin: auto;
+        max-width: 1200px;
+        display: grid;
+        grid-template-areas:
+        'header'
+        'main'
+        'left'
+        'right';
+        grid-gap: 20px;
+        padding: 10px;
+    }
+
+    .history {
+      margin: auto;
+      max-width: 1000px;
+      display: grid;
+      grid-template-areas:
+      'left-bottom'
+      'right-bottom';
+      grid-gap: 20px;
+      padding: 30px;
+      margin-top: 30px;
+  }
+
+    .left, .right {
+        max-width: 100%;
+    }
+  }
+
+  @media (min-width: 850px) {
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    nav li:first-child {
+      flex-basis: auto;
+      text-align: left;
+      margin-right: auto;
+    }
+  }
+
